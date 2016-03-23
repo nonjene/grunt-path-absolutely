@@ -1,0 +1,30 @@
+{
+  "name": "grunt-path-absolutely",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "grunt": "*"
+  },
+  "description": "A grunt plugin for convert relative path to absolutely.",
+  "main": "Gruntfile.js",
+  "directories": {},
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonjene/grunt-path-absolutely.git"
+  },
+  "keywords": [
+    "grunt",
+    "gruntplugin"
+  ],
+  "author": "nonjene",
+  "bugs": {
+    "url": "https://github.com/nonjene/grunt-path-absolutely/issues"
+  },
+  "homepage": "https://github.com/nonjene/grunt-path-absolutely#readme"
+}
