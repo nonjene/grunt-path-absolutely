@@ -57,3 +57,5 @@ grunt.initConfig( {
     }
     } );
 ```
+## Abspath task
+Run this task with the `grunt abspath` command.
