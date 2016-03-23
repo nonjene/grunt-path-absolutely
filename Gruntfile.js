@@ -8,7 +8,7 @@ module.exports = function ( grunt ) {
                 options:{
                     devRoot:'test/dev',
                     releaseRoot:'http://cdn.xxx.com',
-                    sourceFilter:['*.{jpg,png,css,js}']
+                    resourceFilter:['*.{jpg,png,css,js}']
                 },
                 files: [ {
                     expand: true,
