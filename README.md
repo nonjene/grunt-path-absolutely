@@ -30,6 +30,27 @@ Once the plugin has been installed, it may be enabled inside your `gruntfile.js`
 ```js
 grunt.loadNpmTasks('grunt-path-absolutely');
 ```
+
+Suppose the project deployment is something like this:
+```
+|--project/
+   |----dev/
+   |------module/
+   |--------style.css
+   |--------srcipt.js
+   |--------pic.jpg
+   |--------index.html
+   |----release/
+   |------cdn.xxx.com/
+   |--------module/
+   |----------style.css
+   |----------srcipt.js
+   |----------pic.jpg
+   |------view/
+   |--------module/
+   |----------index.html
+```
+
 Then, add and configure it to your Gruntfile.js:
 
 ```js
@@ -37,21 +58,19 @@ grunt.initConfig( {
     abspath:{
         dist:{
             options:{
-                //resource file's rootdir,which will be replace by 'releaseRoot'
-                devRoot:'path/to/dev',
+                //resource file's actual root, which part you want it to replaced by 'releaseRoot'
+                devRoot:'dev',
                 //the absolute root you wanted
                 releaseRoot:'http://cdn.xxx.com',
-                //what resource need to change the root
+                //what resource need in  to change the root
                 resourceFilter:['*.{jpg,png,css,js}']
             },
             files: [ {
                 expand: true,
-                //main file's rootdir
-                cwd: 'test/dev',
-                //main file's type
-                src: [ '**/*.html' ],
+                //main file(eg:index.html) rootdir
+                src: [ 'dev/**/*.html' ],
                 //output main file
-                dest: 'test/out'
+                dest: 'release/view'
             } ]
         }
     }
