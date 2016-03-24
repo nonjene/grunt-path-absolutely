@@ -62,7 +62,7 @@ grunt.initConfig( {
                 devRoot:'dev',
                 //the absolute root you wanted
                 releaseRoot:'http://cdn.xxx.com',
-                //what resource need in  to change the root
+                //in main file(index.html), what resource need to change the root
                 resourceFilter:['*.{jpg,png,css,js}']
             },
             files: [ {
